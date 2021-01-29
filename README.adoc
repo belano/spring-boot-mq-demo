@@ -1,0 +1,13 @@
+= Spring Boot MQ demo application
+
+Sample application demonstrating the usage of the http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22mq-jms-spring-boot-starter%22[Spring Boot Starter for MQ].
+
+MQ runs in a docker container which can be started via docker-compose (see `/src/test/resource/docker-compose.yml`) or automatically via https://www.testcontainers.org/[Testcontainers] during testing.
+
+To run this project, first start the MQ container:
+
+`docker-compose -f /src/test/resource/docker-compose.yml up`
+
+Then run the application using maven:
+
+`./mvnw spring-boot:run`

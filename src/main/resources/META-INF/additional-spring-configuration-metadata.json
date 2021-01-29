@@ -1,0 +1,9 @@
+{
+  "properties": [
+    {
+      "name": "demo.scheduling.enabled",
+      "type": "java.lang.String",
+      "description": "Description for demo.scheduling.enabled."
+    }
+  ]
+}
