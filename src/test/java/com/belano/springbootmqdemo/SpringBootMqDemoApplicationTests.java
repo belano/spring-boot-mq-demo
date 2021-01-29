@@ -3,11 +3,8 @@ package com.belano.springbootmqdemo;
 import static org.awaitility.Awaitility.await;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-import com.belano.springbootmqdemo.domain.Email;
-import com.belano.springbootmqdemo.jms.EmailCounter;
-import com.belano.springbootmqdemo.jms.EmailSender;
 import java.util.concurrent.TimeUnit;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +18,9 @@ import org.testcontainers.containers.GenericContainer;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 import org.testcontainers.utility.DockerImageName;
+import com.belano.springbootmqdemo.domain.Email;
+import com.belano.springbootmqdemo.jms.EmailCounter;
+import com.belano.springbootmqdemo.jms.EmailSender;
 
 @SpringBootTest
 @ActiveProfiles("test")
