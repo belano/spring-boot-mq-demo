@@ -10,3 +10,8 @@ services:
       MQ_QMGR_NAME: QM1
       LOG_FORMAT: json
       MQ_APP_PASSWORD: ${MQ_APP_PASSWORD}
+    healthcheck:
+      test: curl -fk -I https://localhost:9443/ibmmq/console || exit 1
+      interval: 1s
+      timeout: 10s
+      retries: 3
