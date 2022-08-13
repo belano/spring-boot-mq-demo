@@ -1,10 +1,12 @@
 version: '3'
 services:
   mq:
-    image: "ibmcom/mq"
+    image: "icr.io/ibm-messaging/mq:latest"
     ports:
       - "1414:1414"
       - "9443:9443"
+    volumes:
+      - "./mq-setup.sh:/tmp/mq-setup.sh"
     environment:
       LICENSE: accept
       MQ_QMGR_NAME: QM1
